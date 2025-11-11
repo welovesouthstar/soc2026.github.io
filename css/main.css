@@ -9,6 +9,7 @@
     width: 5%;
     margin-left: 75px;
     height: auto;
+    animation: navbarDown 1s ease-out forwards;
 }
 
 .navbar .features,
@@ -25,18 +26,30 @@
 
 .navbar .features {
   left: 650px;
+  animation: navbarDown 1s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .navbar .dashboard {
   left: 750px;
+  animation: navbarDown 1s ease-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 
 .navbar .pricing {
   left: 865px;
+  animation: navbarDown 1s ease-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
 }
 
 .navbar .contact {
   left: 950px;
+  animation: navbarDown 1s ease-out forwards;
+  animation-delay: 1.1s;
+  opacity: 0;
 }
 
 .main .bigtext {
@@ -60,14 +73,88 @@
   font-family: Arial;
   font-size: 20px;
   top: 450px;
-  left: 354px;
+  left: 356px;
   color: gray;
 
-  opacity 0;
   transform: translateY(30px);
   animation: smalltextFade 1s ease-out forwards;
-  animation-delay: 0.5s; /* starts 1.5s after page load */
+  animation-delay: 0.5s;
   opacity: 0;
+}
+
+.main .smalltext1 {
+  position: absolute;
+  font-family: Arial;
+  font-size: 20px;
+  top: 475px;
+  left: 356px;
+  color: gray;
+
+  transform: translateY(30px);
+  animation: smalltextFade 1s ease-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+
+.main .PricingButton {
+    background: linear-gradient(45deg, #80ed99, #affc41);
+    color: white;
+    top: 525px;
+    left: 356px;
+    transform: translateY(0); /* start at final animation position */
+    opacity: 0;
+    position: absolute;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: smalltextFade 1s ease-out forwards;
+    animation-delay: 1.1s;
+}
+
+.main .PricingButton:hover {
+    transform: translateY(0) scale(1.5); /* combine both transforms */
+}
+
+.main .StartButton {
+    background: linear-gradient(45deg, #80ed99, #affc41);
+    color: white;
+    top: 525px;
+    left: 480px;
+    transform: translateY(0); /* start at final animation position */
+    opacity: 0;
+    position: absolute;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: smalltextFade 1s ease-out forwards;
+    animation-delay: 1.3s;
+}
+
+.main .PricingButton:hover {
+    transform: translateY(0) scale(1.5); /* combine both transforms */
+}
+
+
+
+@keyframes navbarDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bigtextFade {
@@ -92,3 +179,11 @@
   }
 }
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
