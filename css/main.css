@@ -1,0 +1,94 @@
+@font-face {
+    font-family: BenzinBold;
+    src: url(/fonts/BenzinBold.ttf);
+}
+
+/* potrebujem to nejak rozmiestnit - DOROBIT*/
+
+.navbar .ShiftLogoNavbar {
+    width: 5%;
+    margin-left: 75px;
+    height: auto;
+}
+
+.navbar .features,
+.navbar .dashboard,
+.navbar .pricing,
+.navbar .contact {
+  font-family: Arial;
+  font-size: 15px;
+  position: fixed;
+  top: 20px;
+  font-weight: 5;
+  opacity: 67%;
+}
+
+.navbar .features {
+  left: 650px;
+}
+
+.navbar .dashboard {
+  left: 750px;
+}
+
+.navbar .pricing {
+  left: 865px;
+}
+
+.navbar .contact {
+  left: 950px;
+}
+
+.main .bigtext {
+  position: absolute;
+  font-family: BenzinBold;
+  font-size: 85px;
+  top: 300px;
+  left: 350px;
+
+  background: linear-gradient(90deg, #80ed99, #affc41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: bigtextFade 1s ease-out forwards;
+}
+
+.main .smalltext {
+  position: absolute;
+  font-family: Arial;
+  font-size: 20px;
+  top: 450px;
+  left: 354px;
+  color: gray;
+
+  opacity 0;
+  transform: translateY(30px);
+  animation: smalltextFade 1s ease-out forwards;
+  animation-delay: 0.5s; /* starts 1.5s after page load */
+  opacity: 0;
+}
+
+@keyframes bigtextFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes smalltextFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
