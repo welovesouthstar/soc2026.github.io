@@ -101,7 +101,7 @@
     color: white;
     top: 525px;
     left: 356px;
-    transform: translateY(0); /* start at final animation position */
+    transform: translateY(0);
     opacity: 0;
     position: absolute;
     padding: 12px 30px;
@@ -116,16 +116,12 @@
     animation-delay: 1.1s;
 }
 
-.main .PricingButton:hover {
-    transform: translateY(0) scale(1.5); /* combine both transforms */
-}
-
 .main .StartButton {
     background: linear-gradient(45deg, #80ed99, #affc41);
     color: white;
     top: 525px;
     left: 480px;
-    transform: translateY(0); /* start at final animation position */
+    transform: translateY(0);
     opacity: 0;
     position: absolute;
     padding: 12px 30px;
@@ -140,11 +136,73 @@
     animation-delay: 1.3s;
 }
 
-.main .PricingButton:hover {
-    transform: translateY(0) scale(1.5); /* combine both transforms */
+.navbar .signup {
+    background: linear-gradient(45deg, #80ed99, #affc41);
+    color: white;
+    top: 19px;
+    left: 1750px;
+    transform: translateY(0);
+    opacity: 0;
+    position: absolute;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: navbarDown 1s ease-out forwards;
+    animation-delay: 1.7s;
 }
 
+.navbar .signin {
+    background: linear-gradient(45deg, #80ed99, #affc41);
+    color: white;
+    top: 19px;
+    left: 1620px;
+    transform: translateY(0);
+    opacity: 0;
+    position: absolute;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: navbarDown 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
 
+.main .ArrowDown {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    width: 20px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInDown 2s ease-out forwards, floatArrow 2s ease-in-out infinite;
+}
+
+.features .title {
+  position: absolute;
+  font-family: BenzinBold;
+  font-size: 85px;
+  top: 900px;
+  text-align: center;
+  justify-content: center;
+
+  background: linear-gradient(90deg, #80ed99, #affc41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: bigtextFade 1s ease-out forwards;
+}
 
 @keyframes navbarDown {
   0% {
@@ -186,4 +244,21 @@
   100% {
     opacity: 1;
   }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes floatArrow {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(15px); }
+  100% { transform: translateX(-50%) translateY(0); }
 }
