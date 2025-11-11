@@ -6,7 +6,6 @@
 /* potrebujem to nejak rozmiestnit - DOROBIT*/
 
 .navbar .ShiftLogoNavbar {
-    position: fixed;
     width: 5%;
     margin-left: 75px;
     height: auto;
@@ -19,7 +18,7 @@
 .navbar .contact {
   font-family: Arial;
   font-size: 15px;
-  position: fixed;
+  position: absolute;
   top: 20px;
   font-weight: 5;
   opacity: 67%;
@@ -205,6 +204,22 @@
   animation: bigtextFade 1s ease-out forwards;
 }
 
+.features .titlelow {
+  position: absolute;
+  top: 1040px;
+  left: 37.7%;
+  transform: translateY(30px);
+  
+  font-family: BenzinBold;
+  font-size: 25px;
+
+  background: linear-gradient(90deg, #80ed99, #affc41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  opacity: 0;
+  animation: bigtextFade 1s ease-out forwards;
+}
 
 @keyframes navbarDown {
   0% {
@@ -264,3 +279,10 @@
   50% { transform: translateX(-50%) translateY(15px); }
   100% { transform: translateX(-50%) translateY(0); }
 }
+
+
+/*
+
+    -- FEATURE --
+
+*/
